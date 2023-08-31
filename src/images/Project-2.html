@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://reactjsexample.com/github-hellovlady-tts-higlighter/ -->
+<html lang="en" style="transform: none;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A React library that provides annotation experience for PDF documents on web</title>
+<link rel="stylesheet" href="./Project-2_files/screen.css">
+<link rel="shortcut icon" href="https://reactjsexample.com/favicon.png" type="image/png">
+<link rel="canonical" href="https://reactjsexample.com/github-hellovlady-tts-higlighter/">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<link rel="amphtml" href="https://reactjsexample.com/github-hellovlady-tts-higlighter/amp/">
+<meta property="og:site_name" content="React.js Examples">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A React library that provides annotation experience for PDF documents on web">
+<meta property="og:description" content="react-pdf-highlighter is a React library that provides annotation experience for PDF documents on web.">
+<meta property="og:url" content="https://reactjsexample.com/github-hellovlady-tts-higlighter/">
+<meta property="og:image" content="https://reactjsexample.com/content/images/2021/10/react-pdf-highlighter.jpg">
+<meta property="article:published_time" content="2021-10-28T17:22:00.000Z">
+<meta property="article:modified_time" content="2021-10-28T17:22:00.000Z">
+<meta property="article:tag" content="PDF">
+<meta property="article:tag" content="Highlighting">
+<meta property="article:tag" content="Document">
+<meta property="article:tag" content="Annotation">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A React library that provides annotation experience for PDF documents on web">
+<meta name="twitter:description" content="react-pdf-highlighter is a React library that provides annotation experience for PDF documents on web.">
+<meta name="twitter:url" content="https://reactjsexample.com/github-hellovlady-tts-higlighter/">
+<meta name="twitter:image" content="https://reactjsexample.com/content/images/2021/10/react-pdf-highlighter.jpg">
+<meta name="twitter:label1" content="Written by">
+<meta name="twitter:data1" content="React">
+<meta name="twitter:label2" content="Filed under">
+<meta name="twitter:data2" content="PDF, Highlighting, Document, Annotation">
+<meta property="og:image:width" content="1198">
+<meta property="og:image:height" content="799">
+<script type="text/javascript" async="" src="./Project-2_files/analytics.js"></script><script type="text/javascript" async="" src="./Project-2_files/js"></script><script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "React.js Examples",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://reactjsexample.com/content/images/2018/01/reactjsexample.png",
+            "width": 259,
+            "height": 55
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "React",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/1f87c1c5e9ccda422d03821987e2cbe5?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "https://reactjsexample.com/author/react/",
+        "sameAs": []
+    },
+    "headline": "A React library that provides annotation experience for PDF documents on web",
+    "url": "https://reactjsexample.com/github-hellovlady-tts-higlighter/",
+    "datePublished": "2021-10-28T17:22:00.000Z",
+    "dateModified": "2021-10-28T17:22:00.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://reactjsexample.com/content/images/2021/10/react-pdf-highlighter.jpg",
+        "width": 1198,
+        "height": 799
+    },
+    "keywords": "PDF, Highlighting, Document, Annotation",
+    "description": "react-pdf-highlighter is a React library that provides annotation experience for PDF documents on web.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://reactjsexample.com/"
+    }
+}
+    </script>
+<script src="./Project-2_files/ghost-sdk.min.js"></script>
+<script>
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "1d7f6785c5cb"
+});
+</script>
+<meta name="generator" content="Ghost 1.26">
+<link rel="alternate" type="application/rss+xml" title="React.js Examples" href="https://reactjsexample.com/rss/">
+
+<script async="" src="./Project-2_files/js(1)"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-82839383-1');
+</script>
+<script async="" src="./Project-2_files/f.txt" crossorigin="anonymous"></script>
+<link href="./Project-2_files/isso.css" id="isso-style" rel="stylesheet" type="text/css"><style>.theiaStickySidebar:after {content: ""; display: table; clear: both;}</style></head>
+<body class="post-template tag-pdf tag-highlighting tag-document tag-annotation" style="transform: none;">
+<nav id="navbar" class="navbar is-fixed-top is-transparent" style="
+        transform: translateY(-60px);
+      ">
+<div id="specialShadow" class="bd-special-shadow" style="opacity: 0; transform: scaleY(0);"></div>
+<div class="container">
+<div class="navbar-brand">
+<a class="navbar-item" href="https://reactjsexample.com/">
+<img src="./Project-2_files/favicon.png" alt=" React.js Examples" width="38" height="38">
+</a>
+<a class="navbar-item " href="https://reactjsexample.com/">
+React.js Examples
+</a>
+<div id="navbarBurger" class="navbar-burger burger" data-target="navMenuIndex">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<div id="navMenuIndex" class="navbar-menu">
+<div class="navbar-start">
+<div class="navbar-item has-dropdown is-hoverable">
+<a class="navbar-link  " href="https://reactjsexample.com/tag/ui/">
+Ui
+</a>
+<div class="navbar-dropdown is-boxed">
+<a class="navbar-item " href="https://reactjsexample.com/tag/templates/">Templates</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/material-design/">Material design</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/list/">List</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/cards/">Cards</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/infinite-scroll/">Infinite Scroll</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/bootstrap/">Bootstrap</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/table/">Table</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/layout/">Layout</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/scroll/">Scroll</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/single-page/">Single Page</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/responsive/">Responsive</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/style/">Style</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/admin-template/">Admin Templates</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/ui/">All UI</a>
+</div>
+</div>
+<div class="navbar-item has-dropdown is-hoverable">
+<a class="navbar-link  " href="https://reactjsexample.com/github-hellovlady-tts-higlighter/#">
+Media
+</a>
+<div class="navbar-dropdown is-boxed">
+<a class="navbar-item " href="https://reactjsexample.com/tag/slides/">Slides</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/slider/">Slider</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/chart/">Chart</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/lightbox/">Lightbox</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/video/">Video</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/gallery/">Gallery</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/carousel/">Carousel</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/images/">Images</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/player/">Player</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/audio/">Audio</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/music/">Music</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/movies/">Movies</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/maps/">Maps</a>
+</div>
+</div>
+<div class="navbar-item has-dropdown is-hoverable">
+<a class="navbar-link  " href="https://reactjsexample.com/github-hellovlady-tts-higlighter/#">
+Elements
+</a>
+<div class="navbar-dropdown is-boxed">
+<a class="navbar-item " href="https://reactjsexample.com/tag/calculator/">Calculator</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/drag/">Drag</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/tooltip/">Tooltip</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/notifications/">Notifications</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/pagination/">Pagination</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/toggle/">Toggle</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/icons/">Icons</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/emoji/">Emoji</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/progress/">Progress</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/loading/">Loading</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/svg/">Svg</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/accordion/">Accordion</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/modals/">Modals</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/popup/">Popup</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/dialogs/">Dialogs</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/color/">Color </a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/clock/">Clock</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/avatar/">Avatar</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/circular/">Circular</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/sticky/">Sticky</a>
+</div>
+</div>
+<div class="navbar-item has-dropdown is-hoverable">
+<a class="navbar-link  " href="https://reactjsexample.com/tag/input/">
+Input
+</a>
+<div class="navbar-dropdown is-boxed">
+<a class="navbar-item " href="https://reactjsexample.com/tag/calendar/">Calendar</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/form/">Form</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/select/">Select</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/date/">Date</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/typography/">Typography</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/textarea/">Textarea</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/message/">Message</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/upload/">Upload</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/notes/">Notes</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/text/">Text</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/search/">Search</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/data/">Data</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/editor/">Editor</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/autocomplete/">Autocomplete</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/inbox/">Inbox</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/time/">Time</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/markdown/">Markdown</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/input/">Input</a>
+</div>
+</div>
+<div class="navbar-item has-dropdown is-hoverable">
+<a class="navbar-link  " href="https://reactjsexample.com/tag/menu/">
+Menu
+</a>
+<div class="navbar-dropdown is-boxed">
+<a class="navbar-item " href="https://reactjsexample.com/tag/dropdown/">Dropdown</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/navbar/">Navbar</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/navigator/">Navigator</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/swipe/">Swipe</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/tabbar/">Tabbar</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/sidebar/">Sidebar</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/intro/">Intro</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/button/">Button</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/tabs/">Tabs</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/drag-drop/">Drag/Drop</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/dock/">Dock</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/fixed/">Fixed</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/tree/">Tree</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/menu/">Menu</a>
+</div>
+</div>
+<div class="navbar-item has-dropdown is-hoverable">
+<a class="navbar-link  " href="https://reactjsexample.com/github-hellovlady-tts-higlighter/#">
+More
+</a>
+<div class="navbar-dropdown is-boxed">
+<a class="navbar-item " href="https://reactjsexample.com/tag/animation/">Animation</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/games/">Games</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/mobile/">Mobile</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/todo/">Todo</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/vote/">Vote</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/sortable/">Sortable</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/weather/">Weather</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/resizable/">Resizable</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/skillbars/">Skillbars</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/framework/">Framework</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/miscellaneous/">Miscellaneous</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/books/">Books</a>
+<a class="navbar-item " href="https://reactjsexample.com/tag/overlay/">Overlay</a>
+</div>
+</div>
+</div>
+<div class="navbar-end">
+<div class="gxx_search" id="bdcs">
+<form action="https://www.google.com/search" method="get" target="_blank">
+<input type="search" name="q" value="" placeholder="Search">
+<input type="hidden" name="ie" value="UTF-8">
+<input type="hidden" name="oe" value="UTF-8">
+<input type="hidden" name="hl" value="en">
+<input type="hidden" name="domains" value="reactjsexample.com">
+<input type="hidden" name="sitesearch" value="reactjsexample.com">
+<input type="submit" class="gxxicon" value="">
+</form>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<section class="ggcontent hidden-xs">
+<script async="" src="./Project-2_files/f.txt" crossorigin="anonymous"></script>
+
+<ins class="adsbygoogle" style="display:inline-block;width:1130px;height:250px" data-ad-client="ca-pub-5680150941998747" data-ad-slot="3755220091"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</section>
+<div class="site" style="transform: none;">
+<div class="site-content" style="transform: none;">
+<div class="container" style="transform: none;">
+<div class="row" style="transform: none;">
+<div class="content-column col-xl-9 col-lg-8">
+<div class="content-area">
+<main class="site-main">
+<article class="post tag-pdf tag-highlighting tag-document tag-annotation single u-shadow">
+<header class="post-header">
+<a class="post-tag" href="https://reactjsexample.com/tag/pdf/">PDF</a>
+<h1 class="post-title">
+A React library that provides annotation experience for PDF documents on web
+</h1>
+</header> <div class="post-meta">
+<time class="post-meta-date" datetime="2021-10-28">
+Oct 28, 2021
+</time>
+<span class="post-meta-length">1 min read</span>
+</div>
+<div class="post-media2">
+<div class="u-placeholder">
+<a class="post-image-link" href="https://reactjsexample.com/github-hellovlady-tts-higlighter/">
+<img class="post-image lazyautosizes lazyloaded" data-srcset="/content/images/2021/10/react-pdf-highlighter.jpg 400w, /content/images/2021/10/react-pdf-highlighter.jpg 750w, /content/images/2021/10/react-pdf-highlighter.jpg 960w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-sizes="auto" alt="A React library that provides annotation experience for PDF documents on web" sizes="799px" srcset="/content/images/2021/10/react-pdf-highlighter.jpg 400w, /content/images/2021/10/react-pdf-highlighter.jpg 750w, /content/images/2021/10/react-pdf-highlighter.jpg 960w">
+</a>
+</div>
+</div>
+<div class="content-wrapper">
+<div class="post-content u-text-format">
+<h2><a id="user-content-react-pdf-highlighter" class="anchor" aria-hidden="true" href="https://reactjsexample.com/github-hellovlady-tts-higlighter/#react-pdf-highlighter"></a>react-pdf-highlighter</h2>
+<p><code>react-pdf-highlighter</code> is a <a href="https://reactjs.org/" rel="noopener" target="_blank">React</a> library that provides annotation experience for PDF documents on web. It is built on top of PDF.js by Mozilla. Text and rectangular highlights are supported. Highlight<br>
+data format is independent of the viewport, making it suitable for saving on the<br>
+server.</p>
+<div class="ct-demo-links">
+<a class="ct-demo-link ct-demo-link--view" href="https://agentcooper.github.io/react-pdf-highlighter/" target="_blank" rel="noopener">View Demo</a>
+<a class="ct-demo-link ct-demo-link--download" href="https://github.com/hellovlady/tts-higlighter?ref=reactjsexample.com" target="_blank" rel="noopener">View Github</a>
+</div>
+<h3><a id="user-content-example" class="anchor" aria-hidden="true" href="https://reactjsexample.com/github-hellovlady-tts-higlighter/#example"></a>Example</h3>
+<p>To run the example app locally:</p>
+<div class="snippet-clipboard-content position-relative overflow-auto" data-snippet-clipboard-copy-content="npm install
+npm start
+"><p></p>
+<pre><code>npm install
+npm start
+</code></pre>
+</div>
+<p>Create React App example is available in <a href="https://github.com/agentcooper/react-pdf-highlighter/tree/master/create-react-app-example" target="_blank" rel="noopener"><code>./create-react-app-example</code></a>. Make sure to run <code>npm install</code> there as well.</p>
+<h3><a id="user-content-installation" class="anchor" aria-hidden="true" href="https://reactjsexample.com/github-hellovlady-tts-higlighter/#installation"></a>Installation</h3>
+<p><code>npm install react-pdf-highlighter</code></p>
+<p>See<br>
+<a href="https://github.com/agentcooper/react-pdf-highlighter/blob/master/example/src/App.tsx" target="_blank" rel="noopener"><code>./example/src/App.tsx</code></a><br>
+for React component API example.</p>
+<h3><a id="user-content-prior-art" class="anchor" aria-hidden="true" href="https://reactjsexample.com/github-hellovlady-tts-higlighter/#prior-art"></a>Prior art</h3>
+<p><a href="https://github.com/wojtekmaj/react-pdf" target="_blank" rel="noopener"><code>react-pdf</code></a> and<br>
+<a href="https://github.com/erikras/react-pdfjs" target="_blank" rel="noopener"><code>react-pdfjs</code></a> only provide React<br>
+wrappers for PDF.js and do not have built-in annotation functionality.</p>
+<p><a href="https://github.com/instructure/pdf-annotate.js/" target="_blank" rel="noopener"><code>pdfjs-annotate</code></a> does not<br>
+provide text highlights out of the box.</p>
+<p>PDF.js provides only viewer:</p>
+<blockquote>
+<p><a href="https://github.com/mozilla/pdf.js/wiki/Frequently-Asked-Questions" target="_blank" rel="noopener">PDF.js is mainly written for reading PDF files, not editing them. Because of that we don’t yet support adding any kind of annotations. We do however support rendering a number of annotation types for viewing.</a></p>
+</blockquote>
+<p>See also:</p>
+<ul>
+<li><a href="https://github.com/mozilla/pdf.js" target="_blank" rel="noopener">https://github.com/mozilla/pdf.js</a></li>
+<li><a href="https://github.com/wojtekmaj/react-pdf" target="_blank" rel="noopener">https://github.com/wojtekmaj/react-pdf</a></li>
+<li><a href="https://github.com/erikras/react-pdfjs" target="_blank" rel="noopener">https://github.com/erikras/react-pdfjs</a></li>
+<li><a href="https://github.com/instructure/pdf-annotate.js/" target="_blank" rel="noopener">https://github.com/instructure/pdf-annotate.js/</a></li>
+<li><a href="https://blogs.dropbox.com/tech/2016/11/annotations-on-document-previews/" rel="noopener" target="_blank">https://blogs.dropbox.com/tech/2016/11/annotations-on-document-previews/</a></li>
+</ul>
+<section id="isso-thread"><h4 class="isso-thread-heading">No Comments Yet</h4><div class="isso-postbox"><div class="isso-form-wrapper"><div class="isso-textarea-wrapper"><textarea class="isso-textarea" rows="5" minlength="3" maxlength="65535" placeholder="Type Comment Here (at least 3 chars)"></textarea><div class="isso-preview"><div class="isso-comment"><div class="isso-text-wrapper"><div class="isso-text"></div></div></div></div></div><section class="isso-auth-section"><p class="isso-input-wrapper"><label for="isso-postbox-author">Name (optional)</label><input id="isso-postbox-author" type="text" name="author" placeholder="John Doe" value=""></p><p class="isso-input-wrapper"><label for="isso-postbox-email">E-mail (optional)</label><input id="isso-postbox-email" type="email" name="email" placeholder="johndoe@example.com" value=""></p><p class="isso-input-wrapper"><label for="isso-postbox-website">Website (optional)</label><input id="isso-postbox-website" type="text" name="website" placeholder="https://example.com" value=""></p><p class="isso-post-action"><input type="submit" value="Submit"></p><p class="isso-post-action"><input type="button" name="preview" value="Preview"></p><p class="isso-post-action"><input type="button" name="edit" value="Edit"></p></section><section class="isso-notification-section" style="display: none;"><label><input type="checkbox" name="notification">Subscribe to email notification of replies</label></section></div></div><div id="isso-root"></div></section>
+</div>
+<div class="post-tags">
+<a class="tag tag-pdf" href="https://reactjsexample.com/tag/pdf/" title="PDF">PDF</a><a class="tag tag-highlighting" href="https://reactjsexample.com/tag/highlighting/" title="Highlighting">Highlighting</a><a class="tag tag-document" href="https://reactjsexample.com/tag/document/" title="Document">Document</a><a class="tag tag-annotation" href="https://reactjsexample.com/tag/annotation/" title="Annotation">Annotation</a>
+</div>
+<div class="share u-hover-wrapper">
+<a class="share-item share-facebook u-hover-item" href="https://www.facebook.com/sharer.php?u=https://reactjsexample.com/github-hellovlady-tts-higlighter/" target="_blank" rel="noopener"><i class="icon icon-facebook"></i></a>
+<a class="share-item share-twitter u-hover-item" href="https://twitter.com/intent/tweet?url=https://reactjsexample.com/github-hellovlady-tts-higlighter/&amp;text=A%20React%20library%20that%20provides%20annotation%20experience%20for%20PDF%20documents%20on%20web" target="_blank" rel="noopener"><i class="icon icon-twitter"></i></a>
+<a class="share-item share-pinterest u-hover-item" href="https://pinterest.com/pin/create/button/?url=https://reactjsexample.com/github-hellovlady-tts-higlighter/&amp;media=&amp;description=A%20React%20library%20that%20provides%20annotation%20experience%20for%20PDF%20documents%20on%20web" target="_blank" rel="noopener"><i class="icon icon-pinterest"></i></a>
+<a class="share-item share-linkedin u-hover-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://reactjsexample.com/github-hellovlady-tts-higlighter/&amp;title=A%20React%20library%20that%20provides%20annotation%20experience%20for%20PDF%20documents%20on%20web" target="_blank" rel="noopener"><i class="icon icon-linkedin"></i></a>
+<a class="share-item share-reddit u-hover-item" href="https://reddit.com/submit?url=https://reactjsexample.com/github-hellovlady-tts-higlighter/&amp;title=A%20React%20library%20that%20provides%20annotation%20experience%20for%20PDF%20documents%20on%20web" target="_blank" rel="noopener"><i class="icon icon-reddit"></i></a>
+<a class="share-item share-vk u-hover-item" href="http://vk.com/share.php?url=https://reactjsexample.com/github-hellovlady-tts-higlighter/&amp;title=A%20React%20library%20that%20provides%20annotation%20experience%20for%20PDF%20documents%20on%20web" target="_blank" rel="noopener"><i class="icon icon-vk"></i></a>
+</div> </div>
+</article>
+<div class="navigation">
+<div class="navigation-item navigation-previous">
+<img class="navigation-image u-object-fit lazyautosizes lazyloaded" data-srcset="/content/images/2021/10/React-Movie-Reviews.jpg 400w, /content/images/2021/10/React-Movie-Reviews.jpg 750w, /content/images/2021/10/React-Movie-Reviews.jpg 960w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-sizes="auto" alt="An Open-Source Movie Reviews Built With React" sizes="396px" srcset="/content/images/2021/10/React-Movie-Reviews.jpg 400w, /content/images/2021/10/React-Movie-Reviews.jpg 750w, /content/images/2021/10/React-Movie-Reviews.jpg 960w">
+<span class="navigation-label">Previous Post</span>
+<h4 class="navigation-title">An Open-Source Movie Reviews Built With React</h4>
+<a class="u-permalink" href="https://reactjsexample.com/an-open-source-movie-reviews-built-with-react/"></a>
+</div>
+<div class="navigation-item navigation-next">
+<img class="navigation-image u-object-fit lazyautosizes lazyloaded" data-srcset="/content/images/2021/10/useFriendData.png 400w, /content/images/2021/10/useFriendData.png 750w, /content/images/2021/10/useFriendData.png 960w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-sizes="auto" alt="Learn how to use ES Modules with Next.js, including using URL imports to fetch packages from JavaScript CDNs" sizes="396px" srcset="/content/images/2021/10/useFriendData.png 400w, /content/images/2021/10/useFriendData.png 750w, /content/images/2021/10/useFriendData.png 960w">
+<span class="navigation-label">Next Post</span>
+<h4 class="navigation-title">Learn how to use ES Modules with Next.js, including using URL imports to fetch packages from JavaScript CDNs</h4>
+<a class="u-permalink" href="https://reactjsexample.com/learn-how-to-use-es-modules-with-next-js-including-using-url-imports-to-fetch-packages-from-javascript-cdns/"></a>
+</div>
+</div>
+<section class="related-posts">
+<h3 class="related-title">
+<span class="text">You might also like...</span>
+</h3>
+<div class="post-feed">
+<article class="post tag-ocr tag-pdf tag-document u-shadow">
+<div class="post-wrapper">
+<div class="post-media">
+<div class="u-placeholder same-height rectangle">
+<a class="post-image-link" href="https://reactjsexample.com/a-gui-offline-ocr-tool-for-searching-scanned-pdf-documents-on-a-per-page-basis/">
+<img class="post-image u-object-fit lazyautosizes lazyloaded" data-srcset="/content/images/2023/04/code_2023-24-14-01-51.jpg 400w, /content/images/2023/04/code_2023-24-14-01-51.jpg 750w, /content/images/2023/04/code_2023-24-14-01-51.jpg 960w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-sizes="auto" alt="A GUI offline OCR tool for searching scanned PDF documents on a per-page basis" sizes="280px" srcset="/content/images/2023/04/code_2023-24-14-01-51.jpg 400w, /content/images/2023/04/code_2023-24-14-01-51.jpg 750w, /content/images/2023/04/code_2023-24-14-01-51.jpg 960w">
+</a>
+</div>
+</div>
+<div class="post-right">
+<header class="post-header">
+<a class="post-tag" href="https://reactjsexample.com/tag/ocr/">OCR</a>
+<h2 class="post-title">
+<a class="post-title-link" href="https://reactjsexample.com/a-gui-offline-ocr-tool-for-searching-scanned-pdf-documents-on-a-per-page-basis/">A GUI offline OCR tool for searching scanned PDF documents on a per-page basis</a>
+</h2>
+</header>
+<div class="post-excerpt">
+A GUI offline OCR tool for searching scanned PDF documents on a per-page basis, prioritizing accessibility, privacy,
+</div>
+<span class="post-card-tags">28 April 2023</span>
+</div>
+</div>
+</article> <article class="post tag-pdf tag-annotation tag-epub u-shadow">
+<div class="post-wrapper">
+<div class="post-media">
+<div class="u-placeholder same-height rectangle">
+<a class="post-image-link" href="https://reactjsexample.com/a-plugin-for-reading-and-annotating-pdfs-and-epubs-in-obsidian/">
+<img class="post-image u-object-fit lazyautosizes lazyloaded" data-srcset="/content/images/2022/07/Code-2022-27-37-36.jpg 400w, /content/images/2022/07/Code-2022-27-37-36.jpg 750w, /content/images/2022/07/Code-2022-27-37-36.jpg 960w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-sizes="auto" alt="A plugin for reading and annotating PDFs and EPUBs in obsidian" sizes="280px" srcset="/content/images/2022/07/Code-2022-27-37-36.jpg 400w, /content/images/2022/07/Code-2022-27-37-36.jpg 750w, /content/images/2022/07/Code-2022-27-37-36.jpg 960w">
+</a>
+</div>
+</div>
+<div class="post-right">
+<header class="post-header">
+<a class="post-tag" href="https://reactjsexample.com/tag/pdf/">PDF</a>
+<h2 class="post-title">
+<a class="post-title-link" href="https://reactjsexample.com/a-plugin-for-reading-and-annotating-pdfs-and-epubs-in-obsidian/">A plugin for reading and annotating PDFs and EPUBs in obsidian</a>
+</h2>
+</header>
+<div class="post-excerpt">
+A plugin for reading and annotating PDFs and EPUBs in obsidian
+</div>
+<span class="post-card-tags">29 July 2022</span>
+</div>
+</div>
+</article> <article class="post tag-document tag-pdf u-shadow">
+<div class="post-wrapper">
+<div class="post-media">
+<div class="u-placeholder same-height rectangle">
+<a class="post-image-link" href="https://reactjsexample.com/a-small-http-microservice-to-generate-pdfs/">
+<img class="post-image u-object-fit lazyautosizes lazyloaded" data-srcset="/content/images/2019/11/PDF-as-React-components.jpg 400w, /content/images/2019/11/PDF-as-React-components.jpg 750w, /content/images/2019/11/PDF-as-React-components.jpg 960w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-sizes="auto" alt="A small HTTP microservice to generate PDFs" sizes="280px" srcset="/content/images/2019/11/PDF-as-React-components.jpg 400w, /content/images/2019/11/PDF-as-React-components.jpg 750w, /content/images/2019/11/PDF-as-React-components.jpg 960w">
+</a>
+</div>
+</div>
+<div class="post-right">
+<header class="post-header">
+<a class="post-tag" href="https://reactjsexample.com/tag/document/">Document</a>
+<h2 class="post-title">
+<a class="post-title-link" href="https://reactjsexample.com/a-small-http-microservice-to-generate-pdfs/">A small HTTP microservice to generate PDFs</a>
+</h2>
+</header>
+<div class="post-excerpt">
+PDF as React components, props over HTTP.
+</div>
+<span class="post-card-tags">11 November 2019</span>
+</div>
+</div>
+</article> </div>
+</section>
+<section class="author u-shadow">
+<section class="subscribe-form">
+<h3 class="subscribe-form-title">Subscribe to React.js Examples</h3>
+<p>Get the latest posts delivered right to your inbox</p>
+<form method="post" action="https://reactjsexample.com/subscribe/" class="">
+<input class="confirm" type="hidden" name="confirm"><input class="location" type="hidden" name="location" value="https://reactjsexample.com/github-hellovlady-tts-higlighter/"><input class="referrer" type="hidden" name="referrer" value="https://www.google.com/">
+<div class="form-group">
+<input class="subscribe-email" type="email" name="email" placeholder="youremail@example.com">
+</div>
+<button class="" type="submit"><span>Subscribe</span></button>
+<script>
+    (function(g,h,o,s,t){
+        var buster = function(b,m) {
+            h[o]('input.'+b).forEach(function (i) {
+                i.value=i.value || m;
+            });
+        };
+        buster('location', g.location.href);
+        buster('referrer', h.referrer);
+    })(window,document,'querySelectorAll','value');
+</script>
+</form>
+</section>
+</section>
+</main>
+</div>
+</div>
+<div class="sidebar-column col-xl-3 col-lg-4 hidden-xs hidden-sm hidden-md" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+ <div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none; top: 0px; left: 964px;"><aside class="widget-area">
+ <div class="widget widget-tags u-shadow">
+<div class="gg-card2">
+
+
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5680150941998747" data-ad-slot="9627773903"></ins>
+
+</div>
+</div>
+<div class="widget widget-tags u-shadow">
+<h4 class="widget-title">Tags</h4>
+<div class="tag-feed">
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/apps-tag/">
+<span class="tag-name">Apps</span>
+<span class="tag-count">1154</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/typescript/">
+<span class="tag-name">TypeScript</span>
+<span class="tag-count">598</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/nextjs/">
+<span class="tag-name">Nextjs</span>
+<span class="tag-count">372</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/hooks/">
+<span class="tag-name">Hooks</span>
+<span class="tag-count">369</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/website/">
+<span class="tag-name">WebSite</span>
+<span class="tag-count">344</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/ui/">
+<span class="tag-name">UI</span>
+<span class="tag-count">323</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/games/">
+<span class="tag-name">Games</span>
+<span class="tag-count">294</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/tailwind-css/">
+<span class="tag-name">Tailwind CSS</span>
+<span class="tag-count">279</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/javascript/">
+<span class="tag-name">Javascript</span>
+<span class="tag-count">252</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/redux/">
+<span class="tag-name">Redux</span>
+<span class="tag-count">219</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/images/">
+<span class="tag-name">Images</span>
+<span class="tag-count">175</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/todo/">
+<span class="tag-name">Todo</span>
+<span class="tag-count">169</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/starter/">
+<span class="tag-name">Starter</span>
+<span class="tag-count">163</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/state/">
+<span class="tag-name">State</span>
+<span class="tag-count">159</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/ecommerce/">
+<span class="tag-name">Ecommerce</span>
+<span class="tag-count">155</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/api/">
+<span class="tag-name">API</span>
+<span class="tag-count">151</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/editor/">
+<span class="tag-name">Editor</span>
+<span class="tag-count">149</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/templates/">
+<span class="tag-name">Templates</span>
+<span class="tag-count">145</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/miscellaneous/">
+<span class="tag-name">Miscellaneous</span>
+<span class="tag-count">144</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/animation/">
+<span class="tag-name">Animation</span>
+<span class="tag-count">143</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/tool/">
+<span class="tag-name">Tool</span>
+<span class="tag-count">141</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/boilerplate/">
+<span class="tag-name">Boilerplate</span>
+<span class="tag-count">137</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/form/">
+<span class="tag-name">Form</span>
+<span class="tag-count">135</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/chart/">
+<span class="tag-name">Chart</span>
+<span class="tag-count">135</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/portfolio-page/">
+<span class="tag-name">Portfolio Page</span>
+<span class="tag-count">126</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/calendar/">
+<span class="tag-name">Calendar</span>
+<span class="tag-count">121</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/react-native/">
+<span class="tag-name">React Native</span>
+<span class="tag-count">120</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/firebase/">
+<span class="tag-name">Firebase</span>
+<span class="tag-count">120</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/generator/">
+<span class="tag-name">Generator</span>
+<span class="tag-count">120</span>
+</a>
+</div>
+<div class="tag">
+<a class="tag-link" href="https://reactjsexample.com/tag/chat/">
+<span class="tag-name">Chat</span>
+<span class="tag-count">115</span>
+</a>
+</div>
+</div>
+</div> <div class="widget widget-recent u-shadow">
+<h4 class="widget-title">Recent Posts</h4>
+<div class="recent-posts">
+<article class="recent">
+<header class="post-header">
+<h5 class="post-title">
+<a class="post-title-link" href="https://reactjsexample.com/a-small-one-page-app-to-show-the-users-ip-address-built-using-react/">A small one-page app to show the user’s IP address, built using React</a>
+</h5>
+<time class="post-date" datetime="2023-08-18">
+Aug 18, 2023
+</time></header> </article>
+<article class="recent">
+<header class="post-header">
+<h5 class="post-title">
+<a class="post-title-link" href="https://reactjsexample.com/a-beautiful-gauge-react-component-to-indicate-a-status/">A beautiful Gauge React component to indicate a status</a>
+</h5>
+<time class="post-date" datetime="2023-08-18">
+Aug 18, 2023
+</time></header> </article>
+<article class="recent">
+<header class="post-header">
+<h5 class="post-title">
+<a class="post-title-link" href="https://reactjsexample.com/a-text-editor-built-with-tiptap-and-tailwindcss-for-react/">A text editor built with Tiptap and TailwindCSS for React</a>
+</h5>
+<time class="post-date" datetime="2023-08-18">
+Aug 18, 2023
+</time></header> </article>
+<article class="recent">
+<header class="post-header">
+<h5 class="post-title">
+<a class="post-title-link" href="https://reactjsexample.com/a-nicely-labelled-canvas-grid-that-adapts-to-a-transform-automatically/">A nicely labelled canvas grid that adapts to a transform automatically</a>
+</h5>
+<time class="post-date" datetime="2023-08-18">
+Aug 18, 2023
+</time></header> </article>
+<article class="recent">
+<header class="post-header">
+<h5 class="post-title">
+<a class="post-title-link" href="https://reactjsexample.com/a-file-upload-sample-with-nextjs/">A file upload sample with NextJs</a>
+</h5>
+<time class="post-date" datetime="2023-08-18">
+Aug 18, 2023
+</time></header> </article>
+</div>
+</div>
+<div class="widget widget-recent u-shadow">
+<div class="gg-card3">
+
+
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5680150941998747" data-ad-slot="3460995508"></ins>
+
+</div>
+</div></aside></div></div>
+</div>
+</div>
+<link rel="stylesheet" href="./Project-2_files/prism.css">
+</div>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-inner">
+<div class="copyright ">
+<a href="https://reactjsexample.com/about/">About</a>&nbsp; | &nbsp;<a href="https://reactjsexample.com/contact/">Contact</a>&nbsp; | &nbsp;<a href="https://reactjsexample.com/privacy-policy/">Privacy Policy</a>&nbsp; | &nbsp;<a href="https://reactjsexample.com/submit-project/">Submit A Project</a>
+</div>
+<div class="social">
+</div>
+<div class="copyright">
+Powered by <a href="https://reactjsexample.com/" target="_blank">React.js Examples</a>
+</div>
+</div>
+</div>
+</footer></div>
+<script src="./Project-2_files/jquery-3.2.1.min.js"></script>
+<script src="./Project-2_files/jquery.githubRepoWidget.min.js"></script>
+<script src="./Project-2_files/main.min.js"></script>
+<script type="text/javascript" src="./Project-2_files/prism.js"></script>
+<script src="./Project-2_files/nav.js"></script>
+<script data-isso="https://reactjsexample.com/comment" src="./Project-2_files/embed.min.js" data-isso-gravatar="true" data-isso-require-author="true" data-isso-require-email="true" data-isso-avatar="false"></script>
+<script type="text/javascript">
+var links = document.querySelectorAll("a");
+for (var i = 0; i < links.length; i++) {
+    if (links[i].hostname != window.location.hostname) {
+        links[i].target = "_blank";
+        links[i].rel = "noopener";
+    }
+}
+</script>
+<script async="" src="./Project-2_files/script.js" data-website-id="171a8a39-e316-4c11-a3d3-30a623373e1d"></script>
+<script defer="" data-domain="reactjsexample.com" src="./Project-2_files/plausible.js"></script>
+
+</body><div id="simplifyJobsContainer" style="position: fixed; top: -100%; left: -100%; width: 0px; height: 0px; overflow: visible; z-index: 2147483647;"><span><template shadowrootmode="open"><link rel="stylesheet" href="chrome-extension://pbanhockgagggenencehbnadejlgchfc/css/styles.css"><style>
+  :host {
+    all: initial;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    font-family: Palanquin, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(203, 213, 225, 1) transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(203, 213, 225, 1);
+    border-radius: 3px;
+    border: 0;
+  }
+</style></template></span></div></html>
